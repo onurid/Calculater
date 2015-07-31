@@ -17,8 +17,6 @@ namespace ConsoleApps.Utils
                           .Select(s => s[random.Next(s.Length)])
                           .ToArray());
             return result;
-
-            return "";
         }
     }
 }
