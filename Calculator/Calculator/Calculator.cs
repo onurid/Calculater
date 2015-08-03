@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Runtime.Remoting.Messaging;
 
 namespace Calculator
 {
@@ -16,7 +18,7 @@ namespace Calculator
             get { return _val1.ToString(); }
             set
             {
-                IsNumeric(value, out _val1);
+                _val1 = IsNumeric(value);
             }
         }
         public string Val2
@@ -24,7 +26,7 @@ namespace Calculator
             get { return _val2.ToString(); }
             set
             {
-                IsNumeric(value, out _val2);
+                _val2 = IsNumeric(value);
             }
         }
         public string Process
@@ -71,23 +73,15 @@ namespace Calculator
             return _val1 / _val2;
         }
 
-        public bool IsNumeric(string value, out double val)
+        public double IsNumeric(string value)
         {
-            if (!string.IsNullOrEmpty(value))
-            {
-                try  // harf girilirse hata verecektir. 
-                {
-                    val = Convert.ToDouble(value);
-                    return true;
-                }
-                catch
-                {
-                    val = 0;
-                    return false;
-                }
-            }
-            val = 0;
-            return false;
+            if (string.IsNullOrEmpty(value)) return (double)0.0;
+
+            double number;
+            if (double.TryParse(value, out number))
+                return number;
+            
+            return (double) 0.0;
         }
     }
 }
