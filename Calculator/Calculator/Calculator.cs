@@ -8,7 +8,14 @@ namespace Calculator
         private double _val2 = 0.0;
         private string _process = null;
 
-        public string Val1
+        public Calculator(string process = "", double firstNumber = (double) 0.0, double secondNumber = (double) 0.0)
+        {
+            _val1 = firstNumber;
+            _val2 = secondNumber;
+            _process = process;
+        }
+
+        public string FirstNumber
         {
             get { return _val1.ToString(); }
             set
@@ -17,7 +24,7 @@ namespace Calculator
                     _val1 = Convert.ToDouble(value);
             }
         }
-        public string Val2
+        public string SecondNumber
         {
             get { return _val2.ToString(); }
             set
@@ -69,7 +76,6 @@ namespace Calculator
         {
             return _val1 / _val2;
         }
-
         public bool IsNumeric(string value)
         {
             double number;

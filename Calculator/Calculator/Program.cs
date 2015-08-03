@@ -13,14 +13,15 @@ namespace Calculator
         static void Main(string[] args)
         {
             var calc = new Calculator();
+
             Console.Write(txt);
-            calc.Val1 = Console.ReadLine();
+            calc.FirstNumber = Console.ReadLine();
 
             Console.Write("Islem ([+], [-], [*], [/]): ");
-            calc.Process = Console.ReadLine();   
-            
+            calc.Process = Console.ReadLine();
+
             Console.Write(txt);
-            calc.Val2 = Console.ReadLine();
+            calc.SecondNumber = Console.ReadLine();
 
             Console.Write(string.Format("Sonuc: {0}", calc.Calculate()));
             
