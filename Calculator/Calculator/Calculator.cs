@@ -1,4 +1,6 @@
-﻿namespace Calculator
+﻿using System;
+
+namespace Calculator
 {
     public class Calculator
     {
@@ -14,7 +16,8 @@
             get { return _val1.ToString(); }
             set
             {
-                _val1 = IsNumeric(value);
+                if (IsNumeric(value))
+                    _val1 = Convert.ToDouble(value);
             }
         }
         public string Val2
@@ -22,7 +25,8 @@
             get { return _val2.ToString(); }
             set
             {
-                _val2 = IsNumeric(value);
+                if (IsNumeric(value))
+                    _val2 = Convert.ToDouble(value);
             }
         }
         public string Process
@@ -69,15 +73,10 @@
             return _val1 / _val2;
         }
 
-        public double IsNumeric(string value)
+        public bool IsNumeric(string value)
         {
-            if (string.IsNullOrEmpty(value)) return (double)0.0;
-
             double number;
-            if (double.TryParse(value, out number))
-                return number;
-            
-            return (double) 0.0;
+            return double.TryParse(value, out number);
         }
     }
 }
