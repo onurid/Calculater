@@ -1,8 +1,4 @@
-﻿using System;
-using System.Globalization;
-using System.Runtime.Remoting.Messaging;
-
-namespace Calculator
+﻿namespace Calculator
 {
     public class Calculator
     {
