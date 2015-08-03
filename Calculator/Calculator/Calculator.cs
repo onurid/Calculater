@@ -16,7 +16,7 @@ namespace Calculator
                 if (!string.IsNullOrEmpty(value))
                     _val1 = Convert.ToDouble(value);
             }
-        }
+        } 
         public static string Val2
         {
             get { return _val2.ToString(); }

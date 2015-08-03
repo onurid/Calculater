@@ -25,5 +25,5 @@ namespace Calculator
             
             Console.ReadKey();
         }
-    }
+    } 
 }
