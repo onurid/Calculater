@@ -8,9 +8,6 @@ namespace Calculator
         private double _val2 = 0.0;
         private string _process = null;
 
-        public Calculator()
-        { }
-
         public string Val1
         {
             get { return _val1.ToString(); }
