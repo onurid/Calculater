@@ -12,16 +12,17 @@ namespace Calculator
 
         static void Main(string[] args)
         {
+            var calc = new Calculator();
             Console.Write(txt);
-            Calculator.Val1 = Console.ReadLine();
+            calc.Val1 = Console.ReadLine();
 
             Console.Write("Islem ([+], [-], [*], [/]): ");
-            Calculator.Process = Console.ReadLine();   
+            calc.Process = Console.ReadLine();   
             
             Console.Write(txt);
-            Calculator.Val2 = Console.ReadLine();
-            
-            Console.Write(string.Format("Sonuc: {0}",Calculator.Calculate()));
+            calc.Val2 = Console.ReadLine();
+
+            Console.Write(string.Format("Sonuc: {0}", calc.Calculate()));
             
             Console.ReadKey();
         }

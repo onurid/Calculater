@@ -1,40 +1,42 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace Calculator
 {
-    public static class Calculator
+    public class Calculator
     {
-        private static double _val1 = 0.0;
-        private static double _val2 = 0.0;
-        private static string _process = null;
+        private double _val1 = 0.0;
+        private double _val2 = 0.0;
+        private string _process = null;
 
-        public static string Val1
+        public Calculator()
+        { }
+
+        public string Val1
         {
             get { return _val1.ToString(); }
             set
             {
-                if (!string.IsNullOrEmpty(value))
-                    _val1 = Convert.ToDouble(value);
+                IsNumeric(value, out _val1);
             }
-        } 
-        public static string Val2
+        }
+        public string Val2
         {
             get { return _val2.ToString(); }
             set
             {
-                if (!string.IsNullOrEmpty(value))
-                    _val2 = Convert.ToDouble(value);
+                IsNumeric(value, out _val2);
             }
         }
-        public static string Process
+        public string Process
         {
             get { return _process; }
             set { _process = value; }
         }
 
-        public static double Calculate()
+        public double Calculate()
         {
-            switch (Process)
+            switch (_process)
             {
                 case "+":
                     return Collect();
@@ -53,21 +55,40 @@ namespace Calculator
             }
         }
 
-        private static double Collect()
+        private double Collect()
         {
             return _val1 + _val2;
         }
-        private static double Interest()
+        private double Interest()
         {
             return _val1 - _val2;
         }
-        private static double Multiply()
+        private double Multiply()
         {
             return _val1 * _val2;
         }
-        private static double Divide()
+        private double Divide()
         {
             return _val1 / _val2;
+        }
+
+        public bool IsNumeric(string value, out double val)
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                try  // harf girilirse hata verecektir. 
+                {
+                    val = Convert.ToDouble(value);
+                    return true;
+                }
+                catch
+                {
+                    val = 0;
+                    return false;
+                }
+            }
+            val = 0;
+            return false;
         }
     }
 }
