@@ -14,4 +14,4 @@ namespace Calculator
             return double.TryParse(value, out number);
         }
     }
-}
+}  
