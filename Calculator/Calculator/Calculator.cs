@@ -15,23 +15,15 @@ namespace Calculator
             _process = process;
         }
 
-        public string FirstNumber
+        public double FirstNumber
         {
-            get { return _val1.ToString(); }
-            set
-            {
-                if (IsNumeric(value))
-                    _val1 = Convert.ToDouble(value);
-            }
+            get { return _val1; }
+            set { _val1 =value; }
         }
-        public string SecondNumber
+        public double SecondNumber
         {
-            get { return _val2.ToString(); }
-            set
-            {
-                if (IsNumeric(value))
-                    _val2 = Convert.ToDouble(value);
-            }
+            get { return _val2; }
+            set { _val2 = value;}
         }
         public string Process
         {
