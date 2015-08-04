@@ -68,10 +68,5 @@ namespace Calculator
         {
             return _val1 / _val2;
         }
-        public bool IsNumeric(string value)
-        {
-            double number;
-            return double.TryParse(value, out number);
-        }
     }
 }
