@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,12 +14,11 @@ namespace Calculator
         static void Main(string[] args)
         {
             var calc = new Calculator();
-
+            var utility = new Utility();
             Console.Write(txt);
 
             var firstNumber = Console.ReadLine();
-            double val1;
-            if (double.TryParse(firstNumber, out val1))
+            if (utility.IsNUmeric(firstNumber))
                 calc.FirstNumber = Convert.ToDouble(firstNumber);
            
 
@@ -28,8 +28,7 @@ namespace Calculator
             Console.Write(txt);
 
             var secondNumber = Console.ReadLine();
-            double val2;
-            if (double.TryParse(secondNumber, out val1))
+            if (utility.IsNUmeric(secondNumber))
                 calc.SecondNumber = Convert.ToDouble(secondNumber);
 
 
