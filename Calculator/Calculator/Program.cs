@@ -10,7 +10,9 @@ namespace Calculator
         static void Main(string[] args)
         {
             //CalculateFromConsole();
+            
             CalculateFromFile();
+            
             Console.ReadKey();
         }
 
@@ -18,24 +20,19 @@ namespace Calculator
         {
             var calc = new Calculator();
             var utility = new Utility();
-            Console.Write(txt);
-
+            
             var firstNumber = Console.ReadLine();
             if (utility.IsNUmeric(firstNumber))
                 calc.FirstNumber = Convert.ToDouble(firstNumber);
-
-
-            Console.Write("Islem ([+], [-], [*], [/]): ");
+            
             calc.Process = Console.ReadLine();
-
-            Console.Write(txt);
 
             var secondNumber = Console.ReadLine();
 
             if (utility.IsNUmeric(secondNumber))
                 calc.SecondNumber = Convert.ToDouble(secondNumber);
 
-            Console.Write(string.Format("Sonuc: {0}", calc.Calculate()));
+            calc.Calculate();
         }
 
         static void CalculateFromFile()
@@ -68,8 +65,7 @@ namespace Calculator
 
             read.Close();
 
-            Console.Write(string.Format("{0} {1} {2} = {3}",calc.FirstNumber, calc.Process, calc.SecondNumber, calc.Calculate()));
-
+            calc.Calculate();
         }
     } 
 }
