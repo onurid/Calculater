@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace Calculator
+﻿namespace Calculator
 {
     public interface ICalculator
     {
