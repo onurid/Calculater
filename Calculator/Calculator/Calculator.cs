@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-    public class Calculator 
+    public class Calculator
     {
         private double _val1 = 0.0;
         private double _val2 = 0.0;

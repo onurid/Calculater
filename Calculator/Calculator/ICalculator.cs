@@ -9,10 +9,5 @@
         void Calculator(string process, double firstNumber, double secondNumber);
 
         double Calculate();
-
-        double Collect();
-        double Interest();
-        double Multiply();
-        double Divide();
     }
 }

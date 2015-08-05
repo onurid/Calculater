@@ -9,18 +9,18 @@ namespace Calculator
 
         static void Main(string[] args)
         {
-            //CalculateFromConsole();
-            
-            CalculateFromFile();
+            var calc = new Calculator();
+            var utility = new Utility();
+
+            CalculateFromConsole(calc,utility);
+
+            CalculateFromFile(calc, utility);
             
             Console.ReadKey();
         }
 
-        static void CalculateFromConsole()
+        static void CalculateFromConsole(ICalculator calc, IUtility utility)
         {
-            var calc = new Calculator();
-            var utility = new Utility();
-            
             var firstNumber = Console.ReadLine();
             if (utility.IsNUmeric(firstNumber))
                 calc.FirstNumber = Convert.ToDouble(firstNumber);
@@ -35,11 +35,8 @@ namespace Calculator
             calc.Calculate();
         }
 
-        static void CalculateFromFile()
+        static void CalculateFromFile(ICalculator calc, IUtility utility)
         {
-            var calc = new Calculator();
-            var utility = new Utility();
-
             var read = File.OpenText(@"c:\Calculate_Log.txt");
 
             string txt;
