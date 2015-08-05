@@ -44,9 +44,11 @@
   <ItemGroup>
     <Compile Include="Calculator.cs" />
     <Compile Include="ICalculator.cs" />
+    <Compile Include="ISalaryCalculator.cs" />
     <Compile Include="IUtility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalaryCalculator.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>

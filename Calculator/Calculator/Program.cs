@@ -9,8 +9,8 @@ namespace Calculator
 
         static void Main(string[] args)
         {
-            var calc = new Calculator();
-
+            ICalculator calc = new Calculator();
+            
 
             CalculateFromConsole(calc, new Utility());
 
@@ -18,7 +18,7 @@ namespace Calculator
 
             Console.WriteLine("ikinci sayi " + calc.SecondNumber);
 
-            Console.WriteLine("sonuc " + calc.Calculate());
+            Console.WriteLine("sonuc " + calc.Result);
 
 
             CalculateFromFile(calc, new Utility());
@@ -28,11 +28,20 @@ namespace Calculator
             
             Console.WriteLine("ikinci sayi " + calc.SecondNumber);
 
-            Console.WriteLine("sonuc " + calc.Calculate());
+            Console.WriteLine("sonuc " + calc.Result);
+            
+
+            ISalaryCalculator salarycalc = new SalaryCalculator();
+
+            SalaryCalculateFromConsole(salarycalc);
+
+            Console.WriteLine("calistigi gun sayisi " + calc.FirstNumber);
+
+            Console.WriteLine("gunluk yevmiye " + calc.SecondNumber);
+
+            Console.WriteLine("maasi " + calc.Result);
 
             Console.ReadKey();
-
-
         }
 
         static void CalculateFromConsole(ICalculator calc, IUtility utility)
@@ -79,6 +88,19 @@ namespace Calculator
             read.Close();
 
             calc.Calculate();
+        }
+
+        static void SalaryCalculateFromConsole(ISalaryCalculator salarycalc)
+        {
+            var numberOfDays = Console.ReadLine();
+
+            salarycalc.NumberOfDays = Convert.ToInt32(numberOfDays);
+
+            var dailyWages = Console.ReadLine();
+
+            salarycalc.DailyWages = Convert.ToInt32(dailyWages);
+
+            salarycalc.SalaryCalculate();
         }
     } 
 }
