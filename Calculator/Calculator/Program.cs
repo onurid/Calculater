@@ -12,8 +12,17 @@ namespace Calculator
 
             //CalculateFromConsole(new Calculator(), new Utility());
 
-            CalculateFromFile(new Calculator(), new Utility());
+            var calc = new Calculator();
+
+            CalculateFromFile(calc, new Utility());
             
+
+            Console.WriteLine("ilk sayi " + calc.FirstNumber);
+            
+            Console.WriteLine("ikinci sayi " + calc.SecondNumber);
+
+            Console.WriteLine("sonuc " + calc.Calculate());
+
             Console.ReadKey();
         }
 
