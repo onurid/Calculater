@@ -9,10 +9,17 @@ namespace Calculator
 
         static void Main(string[] args)
         {
-
-            //CalculateFromConsole(new Calculator(), new Utility());
-
             var calc = new Calculator();
+
+
+            CalculateFromConsole(calc, new Utility());
+
+            Console.WriteLine("ilk sayi " + calc.FirstNumber);
+
+            Console.WriteLine("ikinci sayi " + calc.SecondNumber);
+
+            Console.WriteLine("sonuc " + calc.Calculate());
+
 
             CalculateFromFile(calc, new Utility());
             
@@ -24,6 +31,8 @@ namespace Calculator
             Console.WriteLine("sonuc " + calc.Calculate());
 
             Console.ReadKey();
+
+
         }
 
         static void CalculateFromConsole(ICalculator calc, IUtility utility)
