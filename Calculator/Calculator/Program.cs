@@ -9,12 +9,10 @@ namespace Calculator
 
         static void Main(string[] args)
         {
-            var calc = new Calculator();
-            var utility = new Utility();
 
-            //CalculateFromConsole(calc,utility);
+            //CalculateFromConsole(new Calculator(), new Utility());
 
-            CalculateFromFile(calc, utility);
+            CalculateFromFile(new Calculator(), new Utility());
             
             Console.ReadKey();
         }
