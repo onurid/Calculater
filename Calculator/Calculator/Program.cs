@@ -12,7 +12,7 @@ namespace Calculator
             var calc = new Calculator();
             var utility = new Utility();
 
-            CalculateFromConsole(calc,utility);
+            //CalculateFromConsole(calc,utility);
 
             CalculateFromFile(calc, utility);
             

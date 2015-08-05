@@ -6,8 +6,6 @@
         double SecondNumber { get; set; }
         string Process { get; set; }
 
-        void Calculator(string process, double firstNumber, double secondNumber);
-
         double Calculate();
     }
 }

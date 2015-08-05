@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-    class Utility
+    class Utility : IUtility
     {
         public bool IsNUmeric(string value)
         {
