@@ -35,11 +35,11 @@ namespace Calculator
 
             SalaryCalculateFromConsole(salarycalc);
 
-            Console.WriteLine("calistigi gun sayisi " + calc.FirstNumber);
+            Console.WriteLine("calistigi gun sayisi " + salarycalc.NumberOfDays);
 
-            Console.WriteLine("gunluk yevmiye " + calc.SecondNumber);
+            Console.WriteLine("gunluk yevmiye " + salarycalc.DailyWages);
 
-            Console.WriteLine("maasi " + calc.Result);
+            Console.WriteLine("maasi " + salarycalc.Salary);
 
             Console.ReadKey();
         }

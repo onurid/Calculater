@@ -2,15 +2,16 @@
 
 namespace Calculator
 {
-    class SalaryCalculator : ISalaryCalculator, ICalculator
+    class SalaryCalculator : Calculator , ISalaryCalculator
     {
         private int _numberofdays = 0;
         private int _dailywages = 0;
+        private double _salary = 0.0;
 
-        public SalaryCalculator(int NumberofDays = 0, int DailyWages = 0)
+        public SalaryCalculator(int numberofDays = 0, int dailyWages = 0)
         {
-            _numberofdays = NumberofDays;
-            _dailywages = DailyWages;
+            _numberofdays = numberofDays;
+            _dailywages = dailyWages;
         }
 
         public int NumberOfDays
@@ -23,15 +24,17 @@ namespace Calculator
             get { return _dailywages; }
             set { _dailywages = value; }
         }
-        public double SalaryCalculate()
+        public double Salary
         {
-            
-            return (double) 0.0;
+            get { return (int) _salary; }
+            set { _salary = value; }
         }
-
-        public double Calculate()
+        public void SalaryCalculate()
         {
-            
+            FirstNumber = NumberOfDays;
+            SecondNumber = DailyWages;
+            Process = "*";
+            Salary = Calculate();
         }
     }
 }

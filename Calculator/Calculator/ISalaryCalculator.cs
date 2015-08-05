@@ -4,6 +4,8 @@
     {
         int NumberOfDays { get; set; }
         int DailyWages { get; set; }
-        double SalaryCalculate();
+        double Salary { get; set; }
+        
+        void SalaryCalculate();
     }
 }
