@@ -52,6 +52,7 @@
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CalculatorMain.cs" />
+    <Compile Include="ProxyCalculator.cs" />
     <Compile Include="SalaryCalculator.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>

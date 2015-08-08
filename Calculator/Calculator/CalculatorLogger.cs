@@ -9,11 +9,16 @@ namespace Calculator
 {
     class CalculatorLogger  : Calculator, ICalculatorLogger
     {
-        private static ICalculator _calc;
+        public ICalculator _calc;
 
         public CalculatorLogger(ICalculator calc)
         {
             _calc = calc;
+        }
+
+        public CalculatorLogger()
+        {
+            
         }
         
         public void CalculateLog()

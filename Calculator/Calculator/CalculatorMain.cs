@@ -12,15 +12,12 @@ namespace Calculator
         public void Start()
         {
 
-            ICalculator calc = new Calculator();
-            
-            CalculateFromConsole(calc, new Utility());
+            var proxyCalc = new ProxyCalculator(new Calculator());
 
-            ICalculatorLogger calclog = new CalculatorLogger(calc);
+            CalculateFromConsole(proxyCalc, new Utility());
 
-            calclog.CalculateLog();
+            proxyCalc.Doit();
 
-            //CalculateFromFile(calc, new Utility());
 
         }
 
