@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 
 namespace Calculator
 {
@@ -6,7 +7,8 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            var calclog = new CalculatorLogger();
+            var calcMain = new CalculatorMain();
+            calcMain.Start();
         }
     } 
 }
