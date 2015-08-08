@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="CalculatorLogger.cs" />
     <Compile Include="ICalculator.cs" />
     <Compile Include="ISalaryCalculator.cs" />
     <Compile Include="IUtility.cs" />
