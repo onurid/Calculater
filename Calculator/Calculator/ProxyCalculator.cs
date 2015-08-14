@@ -6,5 +6,6 @@
         {
             CalculateLog();
         }
+
     }
 }
