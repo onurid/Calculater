@@ -1,24 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator
 {
     class CalculatorMain
     {
+        private ProxyCalculator proxyCalc;
+        public CalculatorMain ()
+        {
+            proxyCalc = new ProxyCalculator();
+        }
         public void Start()
         {
-
-            var proxyCalc = new ProxyCalculator(new Calculator());
-
             CalculateFromConsole(proxyCalc, new Utility());
 
             proxyCalc.Doit();
-
-
         }
 
         void CalculateFromConsole(ICalculator calc, IUtility utility)

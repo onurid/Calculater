@@ -1,11 +1,8 @@
-﻿using System;
-using System.Linq.Expressions;
-
-namespace Calculator
+﻿namespace Calculator
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var calcMain = new CalculatorMain();
             calcMain.Start();
