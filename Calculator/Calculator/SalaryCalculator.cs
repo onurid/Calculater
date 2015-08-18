@@ -2,7 +2,7 @@
 
 namespace Calculator
 {
-    class SalaryCalculator : Calculator , ISalaryCalculator
+    class SalaryCalculator : ISalaryCalculator
     {
         private int _numberofdays = 0;
         private int _dailywages = 0;
@@ -31,10 +31,11 @@ namespace Calculator
         }
         public void SalaryCalculate()
         {
-            FirstNumber = NumberOfDays;
-            SecondNumber = DailyWages;
-            Process = "*";
-            Salary = Calculate();
+            //FirstNumber = NumberOfDays;
+            //SecondNumber = DailyWages;
+            //Process = "*";
+            //Calculate();
+            //Salary = Result;
         }
     }
 }

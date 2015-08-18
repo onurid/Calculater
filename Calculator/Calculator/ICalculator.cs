@@ -6,7 +6,6 @@
         double SecondNumber { get; set; }
         double Result { get; set; }
         string Process { get; set; }
-
-        double Calculate();
+        void Calculate();
     }
 }

@@ -13,8 +13,6 @@ namespace Calculator
         public void Start()
         {
             CalculateFromConsole(proxyCalc, new Utility());
-
-            proxyCalc.Doit();
         }
 
         void CalculateFromConsole(ICalculator calc, IUtility utility)

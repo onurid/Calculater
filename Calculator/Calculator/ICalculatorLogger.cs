@@ -2,6 +2,6 @@
 {
     public interface ICalculatorLogger
     {
-        void CalculateLog();
+        void CalculateLog(ICalculator calc);
     }
 }

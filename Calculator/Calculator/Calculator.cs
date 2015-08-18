@@ -37,24 +37,25 @@
             set { _process = value; }
         }
 
-        public double Calculate()
+        public void Calculate()
         {
             switch (_process)
             {
                 case "+": _result = Collect();
-                    return _result;
+                    break;
                     
                 case "-": _result =Interest();
-                    return _result;
+                    break;
 
                 case "*": _result =Multiply();
-                    return _result;
+                    break;
 
                 case "/": _result =Divide();
-                    return _result;
+                    break;
 
                 default:
-                    return (double) 0.0;
+                    _result = (double) 0.0;
+                    break;
             }
         }
 

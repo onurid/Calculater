@@ -2,15 +2,15 @@
 
 namespace Calculator
 {
-    class CalculatorLogger  : Calculator, ICalculatorLogger
+    class CalculatorLogger  : ICalculatorLogger
     {
-        public void CalculateLog()
+        public void CalculateLog(ICalculator calc)
         {
-            Console.WriteLine("ilk sayi " + base.FirstNumber);
+            Console.WriteLine("ilk sayi " + calc.FirstNumber);
 
-            Console.WriteLine("ikinci sayi " + base.SecondNumber);
+            Console.WriteLine("ikinci sayi " + calc.SecondNumber);
 
-            Console.WriteLine("sonuc " + base.Result);
+            Console.WriteLine("sonuc " + calc.Result);
 
             Console.ReadKey();
         }
