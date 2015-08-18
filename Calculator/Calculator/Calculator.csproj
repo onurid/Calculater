@@ -43,17 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
-    <Compile Include="CalculatorLogger.cs" />
     <Compile Include="ICalculator.cs" />
-    <Compile Include="ICalculatorLogger.cs" />
-    <Compile Include="ISalaryCalculator.cs" />
     <Compile Include="IUtility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CalculatorMain.cs" />
     <Compile Include="ProxyCalculator.cs" />
-    <Compile Include="SalaryCalculator.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>

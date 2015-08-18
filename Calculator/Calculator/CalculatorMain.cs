@@ -60,18 +60,5 @@ namespace Calculator
 
             calc.Calculate();
         }
-
-        static void SalaryCalculateFromConsole(ISalaryCalculator salarycalc)
-        {
-            var numberOfDays = Console.ReadLine();
-
-            salarycalc.NumberOfDays = Convert.ToInt32(numberOfDays);
-
-            var dailyWages = Console.ReadLine();
-
-            salarycalc.DailyWages = Convert.ToInt32(dailyWages);
-
-            salarycalc.SalaryCalculate();
-        }
     }
 }

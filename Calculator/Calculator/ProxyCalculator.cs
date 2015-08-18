@@ -22,9 +22,19 @@ namespace Calculator
             calc.SecondNumber = this.SecondNumber;
             calc.Process = this.Process;
             calc.Calculate();
+            
+            CalculateLog(calc);
+        }
 
-            var calcLog = new CalculatorLogger();
-            calcLog.CalculateLog(calc);
+        public void CalculateLog(ICalculator calc)
+        {
+            Console.WriteLine("ilk sayi " + calc.FirstNumber);
+
+            Console.WriteLine("ikinci sayi " + calc.SecondNumber);
+
+            Console.WriteLine("sonuc " + calc.Result);
+
+            Console.ReadKey();
         }
     }
 }
